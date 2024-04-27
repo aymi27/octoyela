@@ -62,7 +62,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
   fs.writeFileSync(path.join(__dirname, 'cache/leave/leave.png'), finalImage);
 
   const formPush = {
-    body: `〘🍥〙${name} has ${type} from the group`,
+    body: `〘🍥〙${name} 𝗁𝖺𝗌 ${type} 𝖿𝗋𝗈𝗆 𝗍𝗁𝖾 𝗀𝗋𝗈𝗎𝗉`,
     attachment: fs.createReadStream(path.join(__dirname, 'cache/leave/leave.png'))
   };
 
