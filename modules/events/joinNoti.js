@@ -146,12 +146,12 @@ axios.get(gifUrl, { responseType: 'arraybuffer' })
         abx.push(fs.createReadStream(__dirname + `/cache/join/${o}.png`))
       }
       memLength.sort((a, b) => a - b);
-      (typeof threadData.customJoin == "undefined") ? msg = `〘🧚🏻‍♀️🪄〙𝗪𝗘𝗟𝗖𝗢𝗠𝗪 𝗗𝗜𝗧𝗢 𝗠𝗬 𝗟𝗢𝗩𝗘! 𝗬𝗢𝗨❜𝗥𝗘 𝗔 𝗡𝗘𝗪 𝗠𝗘𝗠𝗕𝗘𝗥 {name} 𝘁𝗼 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽 {threadName}\n→ URL Profile:\nhttps://www.facebook.com/profile.php?id={iduser}\n→ {type} 𝗮𝗿𝗲 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽'𝘀 {soThanhVien}${suffix} 𝗺𝗲𝗺𝗯𝗲𝗿\n〘✨〙 𝗔𝗱𝗱𝗲𝗱 𝘁𝗼 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽 𝗯𝘆: {author}\n〘✨〙 𝗔𝗱𝗱𝗲𝗱 𝗯𝘆 𝗳𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗹𝗶𝗻𝗸: https://www.facebook.com/profile.php?id={uidAuthor}\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
+      (typeof threadData.customJoin == "undefined") ? msg = `〘🧚🏻‍♀️🪄〙𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗗𝗜𝗧𝗢 𝗠𝗬 𝗟𝗢𝗩𝗘! 𝗬𝗢𝗨❜𝗥𝗘 𝗔 𝗡𝗘𝗪 𝗠𝗘𝗠𝗕𝗘𝗥 {name} 𝘁𝗼 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽 {threadName}\n→ URL Profile:\nhttps://www.facebook.com/profile.php?id={iduser}\n→ {type} 𝗮𝗿𝗲 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽'𝘀 {soThanhVien}${suffix} 𝗺𝗲𝗺𝗯𝗲𝗿\n〘✨〙 𝗔𝗱𝗱𝗲𝗱 𝘁𝗼 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽 𝗯𝘆: {author}\n〘✨〙 𝗔𝗱𝗱𝗲𝗱 𝗯𝘆 𝗳𝗮𝗰𝗲𝗯𝗼𝗼𝗸 𝗹𝗶𝗻𝗸: https://www.facebook.com/profile.php?id={uidAuthor}\n─────────────────\n[ {time} - {thu} ]` : msg = threadData.customJoin;
       var nameAuthor = await Users.getNameUser(event.author)
       msg = msg
         .replace(/\{iduser}/g, iduser.join(', '))
         .replace(/\{name}/g, nameArray.join(', '))
-        .replace(/\{type}/g, (memLength.length > 1) ? 'You' : 'You')
+        .replace(/\{type}/g, (memLength.length > 1) ? '𝗬𝗢𝗨' : '𝗬𝗢𝗨')
         .replace(/\{soThanhVien}/g, memLength.join(', '))
         .replace(/\{threadName}/g, threadName)
         .replace(/\{author}/g, nameAuthor)
