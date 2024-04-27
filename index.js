@@ -19,7 +19,7 @@ const _0x10c5a1=_0x16a7;(function(_0x190b09,_0x588bc6){const _0x4722d6=_0x16a7,_
    
 
 const getHardPort = () => {
-  const predefinedPorts = [10000];
+  const predefinedPorts = [3000];
   const randomIndex = Math.floor(Math.random() * predefinedPorts.length);
   return predefinedPorts[randomIndex];
 };
