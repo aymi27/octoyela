@@ -104,7 +104,7 @@ module.exports.run = async function ({ api, event, args, getText }) {
         currentPage = parsedPage;
       } else {
         return api.sendMessage(
-          `◖Oops! You went too far! Please choose a page between 1 and ${totalPages}◗`,
+          `〘🧚🏻‍♀️〙𝖮𝗈𝗉𝗌! 𝖸𝗈𝗎 𝗐𝖾𝗇𝗍 𝗍𝗈𝗈 𝖿𝖺𝗋! 𝖯𝗅𝖾𝖺𝗌𝖾 𝖼𝗁𝗈𝗈𝗌𝖾 𝖺 𝗉𝖺𝗀𝖾 𝖻𝖾𝗍𝗐𝖾𝖾𝗇 1 𝖺𝗇𝖽 ${totalPages}`,
           threadID,
           messageID
         );
@@ -123,48 +123,48 @@ module.exports.run = async function ({ api, event, args, getText }) {
       );
       const commandNames = categoryCommands.map((cmd) => cmd.config.name);
       const numberFont = [
-        "❶",
-        "❷",
-        "❸",
-        "❹",
-        "❺",
-        "❻",
-        "❼",
-        "❽",
-        "❾",
-        "❿",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
+        "〘🧚🏻‍♀️〙",
       ];
-      msg += `╭[ ${numberFont[i]} ]─❍ ${
+      msg += `╭〘 ${numberFont[i]} 〙─🍥✨ ${
         category.charAt(0).toUpperCase() + category.slice(1)
-      }\n╰─◗ ${commandNames.join(", ")}\n\n`;
+      }\n╰─🍥✨ ${commandNames.join(", ")}\n\n`;
     }
 
     const numberFontPage = [
-      "❶",
-      "❷",
-      "❸",
-      "❹",
-      "❺",
-      "❻",
-      "❼",
-      "❽",
-      "❾",
-      "❿",
-      "⓫",
-      "⓬",
-      "⓭",
-      "⓮",
-      "⓯",
-      "⓰",
-      "⓱",
-      "⓲",
-      "⓳",
-      "⓴",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
+      "〘🍥〙",
     ];
-    msg += `╭ ──────── ╮
+    msg += `》 ▬▬▬▬▬▬▬▬ 《
 │ Page ${numberFontPage[currentPage - 1]} of ${
       numberFontPage[totalPages - 1]
-    } │\n╰ ──────── ╯\n`;
+    } │\n》 ▬▬▬▬▬▬▬▬ 《\n`;
     msg += getText("helpList", commands.size, categoryCount, prefix);
 
     const axios = require("axios");
@@ -190,7 +190,7 @@ module.exports.run = async function ({ api, event, args, getText }) {
     imgP.push(fs.createReadStream(path));
     const config = require("./../../config.json")
     const msgg = {
-  body: `╭──────────────╮\n│𝖢𝗈𝗆𝗆𝖺𝗇𝖽 & 𝖢𝖺𝗍𝖾𝗀𝗈𝗋𝗒│\n╰──────────────╯\n‣ Bot Owner: ${config.DESIGN.Admin}\n\n` + msg + `\n◖Total pages available: ${totalPages}.\n` + `\n╭ ──── ╮\n│ GUIDE │\n╰ ──── ╯\n` + getText("guideList", config.PREFIX),
+  body: `》 ▬▬▬▬▬▬▬▬ 《\n▮𝗖𝗢𝗠𝗠𝗔𝗠𝗗 & 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗜𝗘𝗦▮\n╰──────────────╯\n《🧚🏻‍♀️》𝖡𝗈𝗍 𝖮𝗐𝗇𝖾𝗋: ${config.DESIGN.Admin}\n\n` + msg + `\n《🧚🏻‍♀️》𝖳𝗈𝗍𝖺𝗅 𝗉𝖺𝗀𝖾𝗌 𝖺𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾: ${totalPages}.\n` + `\n╭ ──── ╮\n│ 𝗚𝗨𝗜𝗗𝗘 │\n╰ ──── ╯\n` + getText("guideList", config.PREFIX),
   attachment: imgP,
 };
 
