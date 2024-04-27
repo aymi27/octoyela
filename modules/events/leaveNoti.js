@@ -25,8 +25,8 @@ let fontlink = 'https://drive.google.com/u/0/uc?id=1ZwFqYB-x6S9MjPfYm3t3SP1joohG
 module.exports.run = async function({ api, event, Users, Threads }) {
   const leftParticipantFbId = event.logMessageData.leftParticipantFbId;
   const name = global.data.userName.get(leftParticipantFbId) || await Users.getNameUser(leftParticipantFbId);
-  const type = (event.author == leftParticipantFbId) ? "left by itself" : "been kicked by the administrator";
-  const Yan = (event.author == leftParticipantFbId) ? "left by itself" : "has been kicked by the administrator";
+  const type = (event.author == leftParticipantFbId) ? "𝗅𝖾𝖿𝗍 𝖻𝗒 𝗂𝗍𝗌𝖾𝗅𝖿" : "𝖻𝖾𝖾𝗇 𝗄𝗂𝖼𝗄𝖾𝖽 𝖻𝗒 𝗍𝗁𝖾 𝖺𝖽𝗆𝗂𝗇𝗂𝗌𝗍𝗋𝖺𝗍𝗈𝗋";
+  const Yan = (event.author == leftParticipantFbId) ? "𝗅𝖾𝖿𝗍 𝖻𝗒 𝗂𝗍𝗌𝖾𝗅𝖿" : "𝗁𝖺𝗌 𝖻𝖾𝖾𝗇 𝗄𝗂𝖼𝗄𝖾𝖽 𝖻𝗒 𝗍𝗁𝖾 𝖺𝖽𝗆𝗂𝗇𝗂𝗌𝗍𝗋𝖺𝗍𝗈𝗋";
 
   let fontPath = path.join(__dirname, "cache", "font.ttf");
   let font = (await axios.get(fontlink, { responseType: 'arraybuffer' })).data;
@@ -62,7 +62,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
   fs.writeFileSync(path.join(__dirname, 'cache/leave/leave.png'), finalImage);
 
   const formPush = {
-    body: `💥${name} has ${type} from the group`,
+    body: `〘🍥〙${name} has ${type} from the group`,
     attachment: fs.createReadStream(path.join(__dirname, 'cache/leave/leave.png'))
   };
 
