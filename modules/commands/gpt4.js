@@ -3,7 +3,7 @@ API BY DEKU
 contact: https://facebook.com/joshg101
 */
 const {get} = require('axios');
-const url = "http://eu4.diresnode.com:3301"; //available model: baymax_gpt, gojo_gpt
+const url = "https://azeu-api-official-1.onrender.com/GlobalGPT?question=Who%20are%20you"; //available model: baymax_gpt, gojo_gpt
 module.exports = {
     config: {
         name: "yelai", //rename it if u want
