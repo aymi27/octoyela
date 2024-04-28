@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "uptimer",
+  name: "up",
   version: "1.0.0",
   hasPermission: 0,
   credits: "Prince Sanel",
