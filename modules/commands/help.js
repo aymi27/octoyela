@@ -26,11 +26,11 @@ module.exports.languages = {
 〘🍥〙𝗡𝗔𝗠𝗘 : ► yoya ィ✨
 〘🍥〙𝗙𝗕 𝗟𝗜𝗡𝗞 : ► https://www.facebook.com/100095262681590✨
 
-𝗬𝗢𝗬𝗔 : please don't add yela to your gc's without my permission po, i will automatically out yela from your gc :>
+𝗬𝗢𝗬𝗔 : please don't add yelo to your gc's without my permission po, i will automatically out yela from your gc :>
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 〘🍥〙𝗥𝗲𝗺𝗶𝗻𝗱𝗲𝗿 : ► 𝚙𝚕𝚎𝚊𝚜𝚎 𝚙𝚊𝚔𝚒
   𝚛𝚎𝚙𝚘𝚛𝚝 𝚜𝚊𝚔𝚒𝚗 𝚒𝚏 𝚗𝚊𝚐 𝚍𝚘𝚠𝚗 𝚌𝚖𝚍𝚜 
-  𝚗𝚒 𝚢𝚎𝚕𝚊 𝚝𝚢𝚜𝚖 ✨
+  𝚗𝚒 𝚢𝚎𝚕𝚘 𝚝𝚢𝚜𝚖 ✨
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬`,
     user: "User",
     adminGroup: "Admin group",
@@ -123,16 +123,16 @@ module.exports.run = async function ({ api, event, args, getText }) {
       );
       const commandNames = categoryCommands.map((cmd) => cmd.config.name);
       const numberFont = [
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
-        "〘🧚🏻‍♀️〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
+        "〘🍋〙",
       ];
       msg += `╭〘 ${numberFont[i]} 〙─🍥✨ ${
         category.charAt(0).toUpperCase() + category.slice(1)
